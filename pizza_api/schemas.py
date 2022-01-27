@@ -1,5 +1,9 @@
+from optparse import Option
 from pydantic import BaseModel
 from typing import Optional
+
+
+
 
 class SignupModel(BaseModel):
     id : Optional[int]
@@ -20,3 +24,10 @@ class SignupModel(BaseModel):
                 "is_active"  : True
             }
         }
+
+class Settings(BaseModel):
+    authjwt_secret_key :str = '8cd273c3a3bd27d7e28c96c75f1f5fa48653e1a49d031e35b378bc6d2d92a5b3'
+
+class LoginModel(BaseModel):
+    username: str
+    password: str
