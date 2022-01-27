@@ -2,6 +2,8 @@ from optparse import Option
 from pydantic import BaseModel
 from typing import Optional
 
+from sqlalchemy import true
+
 
 
 
@@ -31,3 +33,13 @@ class Settings(BaseModel):
 class LoginModel(BaseModel):
     username: str
     password: str
+
+class OrderModel(BaseModel):
+    id : Optional[int]
+    quantity : int
+    order_status : Optional[str] ="PENDING"
+    pizza_size : Optional[str] = "SMALL"
+    user_id : Optional[int]
+    
+    class Config:
+        orm_mode = True
