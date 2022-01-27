@@ -6,7 +6,6 @@ from sqlalchemy import true
 
 
 
-
 class SignupModel(BaseModel):
     id : Optional[int]
     username : str
@@ -43,3 +42,10 @@ class OrderModel(BaseModel):
     
     class Config:
         orm_mode = True
+        schema_extra = {
+            "example" :{
+                "quantity" : 2 ,
+                "pizza_size" : "LARGE" ,
+
+            }
+        }
