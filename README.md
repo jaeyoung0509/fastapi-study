@@ -4,6 +4,7 @@
 >- [fastapi offical document]<br>(https://fastapi.tiangolo.com/tutorial/middleware/) <br>
 > -  [tortoise docuemnt]
 > (https://tortoise-orm.readthedocs.io/en/latest/)
+> - [fastapi - rabbitmq - celery]
 >  https://medium.com/thelorry-product-tech-data/celery-asynchronous-task-queue-with-fastapi-flower-monitoring-tool-e7135bd0479f
 > - db : postgress
 > - backend : fastapi
